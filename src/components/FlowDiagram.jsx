@@ -20,6 +20,8 @@ const FlowDiagram = () => {
   const [selectedNode, setSelectedNode] = useState(null);
   const modalRef = useRef(null);
 
+
+
   const handleNodeClick = (event, node) => {
     setSelectedNode(node);
   };
@@ -90,8 +92,8 @@ const FlowDiagram = () => {
           onNodeMouseLeave={onNodeMouseLeave}
           fitView
         >
-          <Controls />
-          <MiniMap />
+          <Controls className="bg-white"/>
+          <MiniMap className="bg-black"/>
           <Background variant="dots" gap={12} size={1} />
           {hoveredNode && hoveredNode.data.hoverContent && hoveredNode.data.hoverContent()}
           {/* {renderNodes} */}
@@ -99,7 +101,7 @@ const FlowDiagram = () => {
         </ReactFlow>
         {selectedNode && (
           <Modal
-            isOpen={!!selectedNode} // Use !! to ensure truthy value for isOpen
+            isOpen={!!selectedNode}
             onClose={handleCloseModal}
             title={selectedNode.data.label}
             content={selectedNode.data.details}
