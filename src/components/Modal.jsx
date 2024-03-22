@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-
 const Modal = ({ isOpen, onClose, title, content }) => {
-  {console.log(content)}
   return (
     <>
       {isOpen && (
@@ -38,7 +35,9 @@ const Modal = ({ isOpen, onClose, title, content }) => {
                 </button>
               </div>
               {/* Modal body */}
-              <div className="p-4 space-y-4 text-black text-xl">{content}</div>
+              <div className="p-4 space-y-4 text-black text-xl">
+                {content}
+              </div>
             </div>
           </div>
         </div>

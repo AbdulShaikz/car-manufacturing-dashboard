@@ -152,13 +152,11 @@ function App() {
   
   export default App; */
   
-  import FlowDiagram from './components/FlowDiagram';
+  import Dashboard from './components/Dashboard';
   
 
   export default function App() {
   return (
-    <>
-      <FlowDiagram/>
-    </>
+    <Dashboard/>
   )
 }
