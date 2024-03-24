@@ -1,4 +1,5 @@
 const Modal = ({ isOpen, onClose, title, content }) => {
+  
   return (
     <>
       {isOpen && (
@@ -7,7 +8,7 @@ const Modal = ({ isOpen, onClose, title, content }) => {
           className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden flex items-center justify-center bg-black bg-opacity-50"
           aria-hidden="true"
         >
-          <div className="relative p-4 w-full max-w-2xl">
+          <div className="relative p-4 w-full max-w-2xl"> 
             <div className="relative bg-white rounded-lg shadow">
               {/* Modal header */}
               <div className="flex items-center justify-between p-4 border-b rounded-t">

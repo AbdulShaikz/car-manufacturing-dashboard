@@ -40,7 +40,7 @@ const Dashboard = () => {
 
   return (
     <ReactFlowProvider>
-      <div className="flow-diagram w-full h-screen bg-gray-900 text-white text-3xl relative">
+      <div className="absolute inset-0 -z-10 h-screen w-full items-center text-3xl [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -54,7 +54,9 @@ const Dashboard = () => {
           <Controls className="bg-white border-black border-r-4" />
           <MiniMap className="bg-black w-fit h-fit" />
           <Background variant="dots" gap={12} size={1} />
+
           {hoveredNode && hoveredNode.data.hoverContent && hoveredNode.data.hoverContent()}
+
         </ReactFlow>
         {selectedNode && (
           <Modal
